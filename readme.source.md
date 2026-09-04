@@ -1,118 +1,113 @@
-```aura width=800 height=360
-<div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', background: '#08080d', borderRadius: 20, overflow: 'hidden', fontFamily: 'Inter, sans-serif' }}>
-  <style>{`
-    @keyframes orb-a { 0%, 100% { transform: translate(0, 0); opacity: 0.6; } 50% { transform: translate(28px, -22px); opacity: 0.9; } }
-    @keyframes orb-b { 0%, 100% { transform: translate(0, 0); opacity: 0.5; } 50% { transform: translate(-22px, 18px); opacity: 0.75; } }
-    @keyframes orb-c { 0%, 100% { transform: translate(0, 0); opacity: 0.35; } 50% { transform: translate(16px, -28px); opacity: 0.6; } }
-    @keyframes ring-blink { 0%, 100% { opacity: 0.06; } 50% { opacity: 0.18; } }
-    @keyframes ring-blink-b { 0%, 100% { opacity: 0.04; } 50% { opacity: 0.12; } }
-    @keyframes dot-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    #hero-o1 { animation: orb-a 9s ease-in-out infinite; }
-    #hero-o2 { animation: orb-b 11s ease-in-out infinite 0.8s; }
-    #hero-o3 { animation: orb-a 8s ease-in-out infinite 2s; }
-    #hero-o4 { animation: orb-b 13s ease-in-out infinite 0.4s; }
-    #hero-o5 { animation: orb-c 7s ease-in-out infinite 1.2s; }
-    #hr1 { animation: ring-blink 8s ease-in-out infinite; }
-    #hr2 { animation: ring-blink 8s ease-in-out infinite 1.4s; }
-    #hr3 { animation: ring-blink-b 8s ease-in-out infinite 2.8s; }
-    #hr4 { animation: ring-blink-b 8s ease-in-out infinite 4.2s; }
-    #hr5 { animation: ring-blink-b 10s ease-in-out infinite 5.6s; }
-    #hero-dot { animation: dot-spin 20s linear infinite; }
-  `}</style>
+```aura width=800 height=200
+<div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '100%',
+  background: 'linear-gradient(135deg, #1e1e2e 0%, #181825 60%, #11111b 100%)',
+  borderRadius: '16px',
+  border: '1px solid #313244',
+  gap: '18px',
+  position: 'relative',
+  overflow: 'hidden',
+}}>
+  <div style={{
+    display: 'flex',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    right: '0',
+    height: '3px',
+    background: 'linear-gradient(90deg, #89b4fa 0%, #cba6f7 50%, #f38ba8 100%)',
+  }} />
 
-  <svg width="800" height="360" style={{ position: 'absolute', top: 0, left: 0 }}>
-    <defs>
-      <radialGradient id="hg1" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(108,195,130,0.55)" />
-        <stop offset="100%" stopColor="rgba(108,195,130,0)" />
-      </radialGradient>
-      <radialGradient id="hg2" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(230,100,115,0.5)" />
-        <stop offset="100%" stopColor="rgba(230,100,115,0)" />
-      </radialGradient>
-      <radialGradient id="hg3" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(195,155,255,0.35)" />
-        <stop offset="100%" stopColor="rgba(195,155,255,0)" />
-      </radialGradient>
-      <radialGradient id="hg4" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(255,195,110,0.28)" />
-        <stop offset="100%" stopColor="rgba(255,195,110,0)" />
-      </radialGradient>
-      <radialGradient id="hg5" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(80,160,220,0.3)" />
-        <stop offset="100%" stopColor="rgba(80,160,220,0)" />
-      </radialGradient>
-    </defs>
-    <ellipse id="hero-o1" cx="110" cy="310" rx="260" ry="200" fill="url(#hg1)" />
-    <ellipse id="hero-o2" cx="710" cy="70" rx="230" ry="190" fill="url(#hg2)" />
-    <ellipse id="hero-o3" cx="620" cy="330" rx="200" ry="160" fill="url(#hg3)" />
-    <ellipse id="hero-o4" cx="200" cy="55" rx="190" ry="150" fill="url(#hg4)" />
-    <ellipse id="hero-o5" cx="400" cy="340" rx="170" ry="130" fill="url(#hg5)" />
-    <circle id="hr1" cx="400" cy="178" r="52"  fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="0.7" />
-    <circle id="hr2" cx="400" cy="178" r="92"  fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="0.7" />
-    <circle id="hr3" cx="400" cy="178" r="138" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="0.7" />
-    <circle id="hr4" cx="400" cy="178" r="192" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="0.7" />
-    <circle id="hr5" cx="400" cy="178" r="256" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="0.7" />
-    <g id="hero-dot">
-      <circle cx="400" cy="126" r="2.5" fill="rgba(255,255,255,0.5)" />
-    </g>
-  </svg>
+  <div style={{
+    display: 'flex',
+    position: 'absolute',
+    top: '-60px',
+    right: '-60px',
+    width: '200px',
+    height: '200px',
+    borderRadius: '50%',
+    background: 'radial-gradient(circle, rgba(137,180,250,0.08) 0%, transparent 70%)',
+  }} />
 
-  <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10 }}>
-    <span style={{ fontSize: 60, fontWeight: 700, color: '#ffffff', letterSpacing: -2, lineHeight: 1 }}>{(github && github.user && (github.user.name || github.user.login)) || 'GitHub Developer'}</span>
-    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', marginTop: 16, letterSpacing: 5, textTransform: 'uppercase', fontWeight: 300 }}>linux · experiementing · coding · ricing</span>
-    <div style={{ display: 'flex', gap: 8, marginTop: 30 }}>
-      <span style={{ padding: '5px 16px', background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)', borderRadius: 100, fontSize: 11, border: '1px solid rgba(255,255,255,0.09)', letterSpacing: 1 }}>minimalism</span>
-      <span style={{ padding: '5px 16px', background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)', borderRadius: 100, fontSize: 11, border: '1px solid rgba(255,255,255,0.09)', letterSpacing: 1 }}>productivity</span>
-      <span style={{ padding: '5px 16px', background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)', borderRadius: 100, fontSize: 11, border: '1px solid rgba(255,255,255,0.09)', letterSpacing: 1 }}>open source</span>
-      <span style={{ padding: '5px 16px', background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.55)', borderRadius: 100, fontSize: 11, border: '1px solid rgba(255,255,255,0.09)', letterSpacing: 1 }}>linux</span>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '20px',
+  }}>
+    <div style={{
+      display: 'flex',
+      width: '76px',
+      height: '76px',
+      borderRadius: '50%',
+      background: 'linear-gradient(135deg, #89b4fa, #cba6f7, #f38ba8)',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      <div style={{
+        display: 'flex',
+        width: '70px',
+        height: '70px',
+        borderRadius: '50%',
+        overflow: 'hidden',
+        border: '2px solid #1e1e2e',
+      }}>
+        <img
+          src="https://github.com/disr6ptt.png"
+          style={{
+            width: '70px',
+            height: '70px',
+          }}
+        />
+      </div>
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+      <span style={{
+        fontSize: '38px',
+        fontWeight: '700',
+        color: '#cdd6f4',
+        letterSpacing: '-1px',
+      }}>
+      disr6pt
+      </span>
+      <span style={{
+        fontSize: '14px',
+        color: '#89b4fa',
+        fontWeight: '500',
+        letterSpacing: '1.5px',
+        textTransform: 'uppercase',
+      }}>
+        linux enthusiast · productivity · ricing
+      </span>
     </div>
   </div>
-</div>
-```
 
-```aura width=800 height=200
-<div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', background: '#08080d', borderRadius: 20, overflow: 'hidden', fontFamily: 'Inter, sans-serif' }}>
-  <style>{`
-    @keyframes stack-orb { 0%, 100% { transform: translate(0,0); opacity: 0.45; } 50% { transform: translate(18px,-14px); opacity: 0.7; } }
-    @keyframes stack-orb-b { 0%, 100% { transform: translate(0,0); opacity: 0.4; } 50% { transform: translate(-14px,10px); opacity: 0.65; } }
-    @keyframes chip-appear { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
-    #st-o1 { animation: stack-orb 10s ease-in-out infinite; }
-    #st-o2 { animation: stack-orb-b 12s ease-in-out infinite 1s; }
-    #st-o3 { animation: stack-orb 9s ease-in-out infinite 2.5s; }
-    #st-o4 { animation: stack-orb-b 11s ease-in-out infinite 0.5s; }
-  `}</style>
-  <svg width="800" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
-    <defs>
-      <radialGradient id="sg1" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(108,195,130,0.4)" />
-        <stop offset="100%" stopColor="rgba(108,195,130,0)" />
-      </radialGradient>
-      <radialGradient id="sg2" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(230,100,115,0.35)" />
-        <stop offset="100%" stopColor="rgba(230,100,115,0)" />
-      </radialGradient>
-      <radialGradient id="sg3" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(80,160,220,0.3)" />
-        <stop offset="100%" stopColor="rgba(80,160,220,0)" />
-      </radialGradient>
-      <radialGradient id="sg4" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="rgba(195,155,255,0.3)" />
-        <stop offset="100%" stopColor="rgba(195,155,255,0)" />
-      </radialGradient>
-    </defs>
-    <ellipse id="st-o1" cx="80"  cy="160" rx="160" ry="120" fill="url(#sg1)" />
-    <ellipse id="st-o2" cx="730" cy="50"  rx="150" ry="120" fill="url(#sg2)" />
-    <ellipse id="st-o3" cx="640" cy="170" rx="140" ry="110" fill="url(#sg3)" />
-    <ellipse id="st-o4" cx="180" cy="40"  rx="130" ry="100" fill="url(#sg4)" />
-  </svg>
-  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', letterSpacing: 4, textTransform: 'uppercase', marginBottom: 20, zIndex: 10 }}>stack</span>
-  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center', zIndex: 10, maxWidth: 680 }}>
-    {(github && github.languages && github.languages.length > 0
-      ? github.languages.slice(0, 10).map(function(l) { return l.name; })
-      : ['Python', 'Shell', 'Quickshell', 'CSS']
-    ).map((tech, i) => (
-      <span key={i} style={{ padding: '7px 18px', background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.65)', borderRadius: 100, fontSize: 12, border: '1px solid rgba(255,255,255,0.08)', letterSpacing: 0.5 }}>{tech}</span>
+  <div style={{ display: 'flex', gap: '8px' }}>
+    {[
+      { tag: 'python', bg: 'rgba(255,255,220,0.12)', border: '#d62828', color: '#d62828' },
+      { tag: 'qml',    bg: 'rgba(255,255,220,0.12)', border: '#69A481', color: '#69A481' },
+      { tag: 'shell',  bg: 'rgba(255,255,220,0.12)', border: '#ff6f3c', color: '#ff6f3c' },
+      { tag: 'linux',  bg: 'rgba(255,255,220,0.12)', border: '#2ec4b6', color: '#2ec4b6' },
+    ].map(({ tag, bg, border, color }) => (
+      <div key={tag} style={{
+        display: 'flex',
+        padding: '4px 14px',
+        borderRadius: '999px',
+        background: bg,
+        border: `1px solid ${border}`,
+        color: color,
+        fontSize: '12px',
+        fontWeight: '700',
+        letterSpacing: '0.8px',
+        textTransform: 'uppercase',
+      }}>
+        {tag}
+      </div>
     ))}
   </div>
 </div>
