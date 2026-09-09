@@ -1,114 +1,292 @@
-```aura width=800 height=200
-<div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
-  height: '100%',
-  background: 'linear-gradient(135deg, #1e1e2e 0%, #181825 60%, #11111b 100%)',
-  borderRadius: '16px',
-  border: '1px solid #313244',
-  gap: '18px',
-  position: 'relative',
-  overflow: 'hidden',
-}}>
-  <div style={{
+```aura width=800 height=360
+<div
+  style={{
+    width: '800px',
+    height: '360px',
+    position: 'relative',
     display: 'flex',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    right: '0',
-    height: '3px',
-    background: 'linear-gradient(90deg, #89b4fa 0%, #cba6f7 50%, #f38ba8 100%)',
-  }} />
+    overflow: 'hidden',
+    background: '#100e0b',
+    fontFamily: 'sans-serif',
+    border: '1px solid rgba(179,229,255,0.35)',
+    borderRadius: '24px',
+    boxSizing: 'border-box'
+  }}
+>
+  <svg
+    width="800"
+    height="360"
+    viewBox="0 0 800 360"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{
+      position: 'absolute',
+      left: '0px',
+      top: '0px',
+      width: '800px',
+      height: '360px',
+      pointerEvents: 'none'
+    }}
+    aria-hidden="true"
+  >
+    <defs>
+      <filter
+        id="beamBlur"
+        x="-200"
+        y="-200"
+        width="1200"
+        height="760"
+      >
+        <feGaussianBlur stdDeviation="14" />
+      </filter>
 
-  <div style={{
-    display: 'flex',
-    position: 'absolute',
-    top: '-60px',
-    right: '-60px',
-    width: '200px',
-    height: '200px',
-    borderRadius: '50%',
-    background: 'radial-gradient(circle, rgba(137,180,250,0.08) 0%, transparent 70%)',
-  }} />
+      <filter
+        id="beamSoftBlur"
+        x="-150"
+        y="-150"
+        width="1100"
+        height="660"
+      >
+        <feGaussianBlur stdDeviation="7" />
+      </filter>
+    </defs>
 
-  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '20px',
-  }}>
-    <div style={{
-      display: 'flex',
-      width: '76px',
-      height: '76px',
-      borderRadius: '50%',
-      background: 'linear-gradient(135deg, #89b4fa, #cba6f7, #f38ba8)',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-      <div style={{
-        display: 'flex',
-        width: '70px',
-        height: '70px',
-        borderRadius: '50%',
-        overflow: 'hidden',
-        border: '2px solid #1e1e2e',
-      }}>
-        <img
-          src="https://github.com/disr6ptt.png"
-          style={{
-            width: '70px',
-            height: '70px',
-          }}
+    <g
+      filter="url(#beamBlur)"
+      opacity="0.8"
+    >
+      <polygon
+        points="-80,520 -25,520 475,-160 420,-160"
+        fill="#2563eb"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-1400 0; 1400 0"
+          dur="5s"
+          repeatCount="indefinite"
         />
-      </div>
-    </div>
+      </polygon>
 
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-      <span style={{
-        fontSize: '38px',
-        fontWeight: '700',
-        color: '#cdd6f4',
-        letterSpacing: '-1px',
-      }}>
-      disr6pt
-      </span>
-      <span style={{
-        fontSize: '14px',
-        color: '#89b4fa',
-        fontWeight: '500',
-        letterSpacing: '1.5px',
-        textTransform: 'uppercase',
-      }}>
-        linux enthusiast · productivity · ricing
-      </span>
-    </div>
-  </div>
+      <polygon
+        points="-140,520 -105,520 395,-160 360,-160"
+        fill="#b3e5ff"
+        opacity="0.75"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-1700 0; 1400 0"
+          dur="6.5s"
+          repeatCount="indefinite"
+        />
+      </polygon>
 
-  <div style={{ display: 'flex', gap: '8px' }}>
-    {[
-      { tag: 'python', bg: 'rgba(255,255,220,0.12)', border: '#d62828', color: '#d62828' },
-      { tag: 'qml',    bg: 'rgba(255,255,220,0.12)', border: '#69A481', color: '#69A481' },
-      { tag: 'shell',  bg: 'rgba(255,255,220,0.12)', border: '#ff6f3c', color: '#ff6f3c' },
-      { tag: 'linux',  bg: 'rgba(255,255,220,0.12)', border: '#2ec4b6', color: '#2ec4b6' },
-    ].map(({ tag, bg, border, color }) => (
-      <div key={tag} style={{
+      <polygon
+        points="-220,520 -175,520 325,-160 280,-160"
+        fill="#143c78"
+        opacity="0.9"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-1900 0; 1500 0"
+          dur="8s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+
+      <polygon
+        points="-300,520 -265,520 235,-160 200,-160"
+        fill="#2563eb"
+        opacity="0.7"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-2100 0; 1500 0"
+          dur="7s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+
+      <polygon
+        points="-400,520 -350,520 150,-160 100,-160"
+        fill="#b3e5ff"
+        opacity="0.6"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-2300 0; 1500 0"
+          dur="9s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+    </g>
+
+    <g
+      filter="url(#beamSoftBlur)"
+      opacity="0.9"
+    >
+      <polygon
+        points="-50,520 -35,520 465,-160 450,-160"
+        fill="#b3e5ff"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-1200 0; 1500 0"
+          dur="4.5s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+
+      <polygon
+        points="-180,520 -165,520 335,-160 320,-160"
+        fill="#2563eb"
+        opacity="0.9"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-1600 0; 1500 0"
+          dur="5.8s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+
+      <polygon
+        points="-330,520 -315,520 185,-160 170,-160"
+        fill="#b3e5ff"
+        opacity="0.7"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-2000 0; 1500 0"
+          dur="7.2s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+
+      <polygon
+        points="-500,520 -485,520 15,-160 0,-160"
+        fill="#2563eb"
+        opacity="0.65"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="-2400 0; 1500 0"
+          dur="8.5s"
+          repeatCount="indefinite"
+        />
+      </polygon>
+    </g>
+  </svg>
+
+  <div
+    style={{
+      position: 'relative',
+      width: '800px',
+      height: '360px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}
+  >
+    <div
+      style={{
         display: 'flex',
-        padding: '4px 14px',
-        borderRadius: '999px',
-        background: bg,
-        border: `1px solid ${border}`,
-        color: color,
-        fontSize: '12px',
-        fontWeight: '700',
-        letterSpacing: '0.8px',
-        textTransform: 'uppercase',
-      }}>
-        {tag}
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          fontSize: '42px',
+          fontWeight: '700',
+          lineHeight: '50px',
+          color: '#d9f3ff',
+          letterSpacing: '1px'
+        }}
+      >
+        {(github && github.user && (github.user.name || github.user.login)) || 'GitHub Developer'}
       </div>
-    ))}
+
+      <div
+        style={{
+          display: 'flex',
+          marginTop: '10px',
+          fontSize: '16px',
+          lineHeight: '22px',
+          color: '#b3e5ff',
+          letterSpacing: '4px'
+        }}
+      >
+        Enthusiasm · Coding · Productivity
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: '28px'
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            padding: '8px 14px',
+            marginRight: '10px',
+            border: '1px solid rgba(179,229,255,0.35)',
+            borderRadius: '20px',
+            color: '#d9f3ff',
+            fontSize: '12px',
+            lineHeight: '16px',
+            background: 'rgba(4,16,34,0.55)'
+          }}
+        >
+          python
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            padding: '8px 14px',
+            marginRight: '10px',
+            border: '1px solid rgba(179,229,255,0.35)',
+            borderRadius: '20px',
+            color: '#d9f3ff',
+            fontSize: '12px',
+            lineHeight: '16px',
+            background: 'rgba(4,16,34,0.55)'
+          }}
+        >
+          shell
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            padding: '8px 14px',
+            border: '1px solid rgba(179,229,255,0.35)',
+            borderRadius: '20px',
+            color: '#d9f3ff',
+            fontSize: '12px',
+            lineHeight: '16px',
+            background: 'rgba(4,16,34,0.55)'
+          }}
+        >
+          linux
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 ```
