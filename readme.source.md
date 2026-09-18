@@ -227,7 +227,7 @@
           letterSpacing: '4px'
         }}
       >
-        Enthusiasm · Coding · Productivity
+        Linux enjoyer
       </div>
 
       <div
